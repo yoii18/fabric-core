@@ -11,8 +11,10 @@
 
 # CELL ********************
 
-# Welcome to your new notebook
-# Type here in the cell editor to add code!
+from common.module import sum
+
+ans = sum(2+3)
+print(ans)
 
 
 # METADATA ********************
