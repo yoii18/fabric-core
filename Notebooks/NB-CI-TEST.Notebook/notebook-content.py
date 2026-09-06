@@ -27,10 +27,19 @@
 
 # CELL ********************
 
-from common.module import sum
+from src.common.module import APICreation, GetData
 
-ans = sum(2,3)
-print(ans)
+gdp_data_api_obj = APICreation()
+
+gdp_data_get_obj = GetData(
+    gdp_data_api_obj.url, gdp_data_api_obj.params, gdp_data_api_obj.headers
+)
+
+res = gdp_data_get_obj.get_response()
+payload = gdp_data_get_obj.get_json_response(res)
+keys = gdp_data_get_obj.get_payload_keys(payload)
+
+print(payload["records"])
 
 
 # METADATA ********************
