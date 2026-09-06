@@ -27,7 +27,7 @@
 
 # CELL ********************
 
-from src.common.module import APICreation, GetData
+from common.module import APICreation, GetData
 
 gdp_data_api_obj = APICreation()
 
